@@ -1,5 +1,7 @@
 require 'sinatra'
 
+set :port, 5252
+
 get '/last-feed' do
 	if !File.exist?(last_feed_id_path)
 		logger.info "initialize last-feed.it"
